@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useProducts } from "../useProduct";
+import { useProducts } from "../hooks/useProduct";
 
 import ProductDetailsView from "./ProductDetailsView";
 

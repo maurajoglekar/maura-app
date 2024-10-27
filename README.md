@@ -1,7 +1,7 @@
 This is a starter react app with docker
 
 git clone https://github.com/maurajoglekar/maura-app.git
-cd into the repo
+cd maura-app
 Run docker deamon
 To build the docker image: docker build -t react-app:dev .
 docker images

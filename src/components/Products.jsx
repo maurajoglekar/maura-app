@@ -1,6 +1,4 @@
-import { useProducts } from "../useProduct";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useProducts } from "../hooks/useProduct";
 import ProductsView from "./ProductsView";
 
 const Products = () => {

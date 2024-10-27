@@ -9,7 +9,7 @@ export const useProducts = () => {
       const data = await response.json();
       setProducts(data);
     } catch (error) {
-      console.log("Error when getting products: ${error}");
+      console.log(`Error when getting products: ${error}`);
     }
   };
 

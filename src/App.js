@@ -1,10 +1,8 @@
-import "./App.css";
-
-import { useProducts } from "./useProduct";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Products from "./components/Products";
 import ProductDetails from "./components/ProductDetails";
 import styled from "styled-components";
+import "./App.css";
 
 // get products and navigate to product details using router
 // use API: https://fakestoreapi.com/products
