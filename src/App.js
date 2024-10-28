@@ -1,8 +1,6 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Products from "./components/Products";
-import ProductDetails from "./components/ProductDetails";
 import styled from "styled-components";
 import "./App.css";
+import Main from "./components/Main";
 
 // get products and navigate to product details using router
 // use API: https://fakestoreapi.com/products
@@ -11,24 +9,26 @@ import "./App.css";
 const StyledAppContainer = styled.div`
   background-color: lightgray;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 
+  main {
+    flex-grow: 1;
+  }
   header,
   footer {
     font-size: 24px;
-    padding: 12px;
+    padding: 24px;
+    background-color: gray;
+    color: white;
   }
 `;
 function App() {
-  const router = createBrowserRouter([
-    { path: "/", element: <Products /> },
-    { path: "/products/:productId", element: <ProductDetails /> },
-  ]);
   return (
     <StyledAppContainer>
       <header>Maura's Store</header>
-      <main>
-        <RouterProvider router={router} />
-      </main>
+      <Main />
       <footer>Copyright 2024</footer>
     </StyledAppContainer>
   );

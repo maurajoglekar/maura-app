@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const StyledProductContainer = styled.div`
   display: flex;
-  height: 90vh;
   flex-wrap: nowrap;
   justify-content: center;
 `;

@@ -26,8 +26,8 @@ const StyledCard = styled(Link)`
   color: darkviolet;
 
   img {
-    height: 10rem;
-    width: 10rem;
+    height: 200px;
+    width: 170px;
   }
 
   .product-title {
