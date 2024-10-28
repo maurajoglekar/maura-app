@@ -28,15 +28,11 @@ const Nav = () => {
     <StyledNav>
       <nav>
         <ul>
-          <StyledLinks>
-            <NavLink style={styleActive} to="/">
-              Products
-            </NavLink>
+          <StyledLinks style={styleActive} to="/">
+            Products
           </StyledLinks>
-          <StyledLinks>
-            <NavLink style={styleActive} to="/register">
-              Registration Form
-            </NavLink>
+          <StyledLinks style={styleActive} to="/register">
+            Registration Form
           </StyledLinks>
         </ul>
       </nav>
