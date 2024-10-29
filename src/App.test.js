@@ -18,7 +18,7 @@ const mockedProducts = [
     },
   },
 ];
-test("renders store title", () => {
+test("renders store header", () => {
   const elem = render(<App />);
   const headerElem = elem.getByText(/Maura's Store/i);
   expect(headerElem).toBeInTheDocument();

@@ -4,14 +4,19 @@ import { useState } from "react";
 
 const StyledStore = styled.div`
   display: flex;
+  flex-direction: row;
 `;
 const StyledCart = styled.div`
   display: flex;
   flex-direction: column;
   width: 500px;
   flex-shrink: 0;
-  background-color: #e7d9d9;
+  background-color: #f5f5f5;
   gap: 16px;
+  margin: 24px;
+  h3 {
+    text-transform: uppercase;
+  }
 `;
 
 const StyledCartItem = styled.div`
@@ -59,7 +64,7 @@ const StyledCard = styled.div`
   text-align: center;
   background-color: white;
   text-decoration: none;
-  color: darkviolet;
+  color: black;
 
   img {
     height: 200px;
@@ -74,7 +79,7 @@ const StyledCard = styled.div`
     padding: 8px;
     width: 180px;
     border-radius: 10px;
-    background-color: #e7d9d9;
+    background-color: #f5f5f5;
   }
 `;
 

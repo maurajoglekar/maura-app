@@ -24,12 +24,17 @@ const StyledAppContainer = styled.div`
     background-color: gray;
     color: white;
   }
+
+  header {
+    text-transform: uppercase;
+    font-size: 24px;
+  }
 `;
 
 function App() {
   return (
     <StyledAppContainer>
-      <header>Maura's Store</header>
+      <header>ecommerce site</header>
       <Main />
       <footer>Copyright 2024</footer>
     </StyledAppContainer>
