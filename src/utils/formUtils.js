@@ -17,12 +17,10 @@ export async function submitForm(username, email, password, passwordConfirm) {
     );
 
     const { message } = await response.json();
-    console.log(message);
-    return message;
-  } catch (_) {
-    const message = "Error submitting form!";
-    console.log(message);
-    return message;
+    return { message, status: response.status };
+  } catch (error) {
+    const data = error;
+    return data;
   }
 }
 

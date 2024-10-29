@@ -16,14 +16,16 @@ const StyledAppContainer = styled.div`
   main {
     flex-grow: 1;
   }
+
   header,
   footer {
-    font-size: 24px;
+    font-size: 16px;
     padding: 24px;
     background-color: gray;
     color: white;
   }
 `;
+
 function App() {
   return (
     <StyledAppContainer>

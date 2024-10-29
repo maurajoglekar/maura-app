@@ -7,7 +7,8 @@ const styleActive = ({ isActive }) => {
 };
 
 const StyledNav = styled.div`
-  font-size: 24px;
+  font-size: 16px;
+  background-color: lightgray;
   ul {
     display: flex;
     gap: 36px;

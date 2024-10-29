@@ -60,9 +60,9 @@ const StyledHeader = styled.div`
 `;
 const StyledResponse = styled.div`
   position: absolute;
-  top: 60px;
+  top: 90px;
   right: 200px;
-  color: blue;
+  color: ${(props) => (props.status === 200 ? "green" : "red")};
   font-size: 20px;
 `;
 
@@ -75,13 +75,13 @@ const emptyForm = {
 const RegistrationForm = () => {
   const [formData, setFormData] = useState(emptyForm);
   const [errors, setErrors] = useState(emptyForm);
-  const [submitResponse, setSubmitResponse] = useState("");
+  const [submitResponse, setSubmitResponse] = useState(null);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
-    setSubmitResponse("");
+    setSubmitResponse(null);
   };
 
   const handleSubmit = async (e) => {
@@ -140,7 +140,9 @@ const RegistrationForm = () => {
           <StyledHeader>
             <h2>Registration Form</h2>
             {submitResponse && (
-              <StyledResponse>{submitResponse}</StyledResponse>
+              <StyledResponse status={submitResponse.status}>
+                {submitResponse.message}
+              </StyledResponse>
             )}
           </StyledHeader>
           <StyledField>
