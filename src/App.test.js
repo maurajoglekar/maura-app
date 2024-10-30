@@ -20,7 +20,7 @@ const mockedProducts = [
 ];
 test("renders store header", () => {
   const elem = render(<App />);
-  const headerElem = elem.getByText(/Maura's Store/i);
+  const headerElem = elem.getByText(/ecommerce site/i);
   expect(headerElem).toBeInTheDocument();
 });
 
@@ -31,6 +31,6 @@ test("renders product details", () => {
 
 test("renders product details title", () => {
   const elem = render(<ProductDetailsView details={mockedProducts[0]} />);
-  const title = elem.getByTestId("title");
-  expect(title).toBeInTheDocument();
+  const titleElem = elem.getByTestId("title");
+  expect(titleElem).toBeInTheDocument();
 });
