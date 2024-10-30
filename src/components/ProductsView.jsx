@@ -6,10 +6,53 @@ const StyledStore = styled.div`
   display: flex;
   flex-direction: row;
 `;
+
+const StyledProducts = styled.div`
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 24px;
+  background-color: lightgray;
+`;
+
+const StyledCard = styled.div`
+  height: 350px;
+  width: 300px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  padding: 16px 8px;
+  text-align: center;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+
+  img {
+    height: 200px;
+    width: 170px;
+  }
+
+  .product-title {
+    height: 40px;
+  }
+
+  button {
+    padding: 8px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
+`;
+
 const StyledCart = styled.div`
   display: flex;
   flex-direction: column;
   width: 500px;
+  max-height: 800px;
   flex-shrink: 0;
   background-color: #f5f5f5;
   gap: 16px;
@@ -17,6 +60,7 @@ const StyledCart = styled.div`
   h3 {
     text-transform: uppercase;
   }
+  overflow-y: scroll;
 `;
 
 const StyledCartItem = styled.div`
@@ -42,53 +86,13 @@ const StyledCartItemTitle = styled.div`
   width: 180px;
   text-align: start;
 `;
-const StyledProducts = styled.div`
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 24px;
-  background-color: lightgray;
-`;
-
-const StyledCard = styled.div`
-  height: 300px;
-  width: 250px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  padding: 16px 8px;
-  text-align: center;
-  background-color: white;
-  text-decoration: none;
-  color: black;
-
-  img {
-    height: 200px;
-    width: 170px;
-  }
-
-  .product-title {
-    height: 50px;
-  }
-
-  button {
-    padding: 8px;
-    width: 180px;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-  }
-`;
 
 const ProductsView = ({ products }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (id) => {
     const product = products.find((product) => product.id === id);
-    const itemInCart = cart.find((product) => product.id === id);
+    const itemInCart = cart.find((item) => item.id === id);
     if (itemInCart) {
       const newCart = cart.map((cartItem) => {
         if (cartItem.id === id) {
