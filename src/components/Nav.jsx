@@ -35,6 +35,9 @@ const Nav = () => {
           <StyledLinks style={styleActive} to="/register">
             Registration Form
           </StyledLinks>
+          <StyledLinks style={styleActive} to="/carousel">
+            Carousel
+          </StyledLinks>
         </ul>
       </nav>
       <Outlet />

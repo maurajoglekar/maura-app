@@ -4,6 +4,7 @@ import ProductDetails from "./ProductDetails";
 import RegistrationForm from "./RegistrationForm";
 import Nav from "./Nav";
 import NotFound from "./NotFound";
+import Carousel from "./Carousel";
 
 const Main = () => {
   const router = createBrowserRouter([
@@ -15,6 +16,7 @@ const Main = () => {
         { path: "/", element: <Products /> },
         { path: "/products/:productId", element: <ProductDetails /> },
         { path: "/register", element: <RegistrationForm /> },
+        { path: "/carousel", element: <Carousel /> },
       ],
     },
   ]);
